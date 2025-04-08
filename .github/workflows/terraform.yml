@@ -62,7 +62,7 @@ jobs:
       # 출력값 아티팩트로 저장 (선택 사항)
       - name: Upload Terraform Output
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: terraform-output
           path: ./terraform-output/
