@@ -41,7 +41,7 @@ resource "aws_key_pair" "ec2_key" {
 
 # EC2 인스턴스 생성
 resource "aws_instance" "web_server" {
-  ami             = "ami-08b09b6aff1e1d563" # Amazon Linux 2 AMI ID (업데이트 필요할 수 있음)
+  ami             = "ami-086cae3329a3f7d75" # Amazon Linux 2 AMI ID
   instance_type   = "t2.micro"
   key_name        = aws_key_pair.ec2_key.key_name
   security_groups = [aws_security_group.web_sg.name]
